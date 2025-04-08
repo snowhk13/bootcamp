@@ -14,7 +14,7 @@ public class DemoString {
     double x = 99.111111;
     boolean pp = true;
 
-    s1 = s1 + pp;
+    s1 = s1 + pp + x; 
     System.out.println(s1);
     
 
