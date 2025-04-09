@@ -12,6 +12,10 @@ public class Helloworld{
 
     System.out.println("123456");
    
+    String a = "hello";
+    char a1 = a.charAt(0);
+    String a2 = a1 + "";
+    System.out.println(a2.equals("h"));
   }
 
 
