@@ -37,6 +37,7 @@ public class DemoDouble {
 
     double r4 = 0 / 10;
     System.out.println(r4);
+    
   }
   
 }
