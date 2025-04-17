@@ -245,6 +245,14 @@ for(int i =0;i<counts.length;i++){
 }
 System.out.println(countsnum);
 
+char t1;
+for(int i =0;i<counts.length;i++){
+  if(counts[i]>1){
+     t1 = (char)(i + 97);
+     System.out.print(t1 + " ");
+  }
+}
+System.out.println(" ");
 String[] lastNames = new String[] {"Lau","Wong","Chan"};
 
 // 0 9 1 9 2 0 9 9
@@ -252,7 +260,7 @@ String[] lastNames = new String[] {"Lau","Wong","Chan"};
 // true
 
 
-char[] chs3 = new char[] {'0','9','1','9','2','0','9','9'};
+char[] chs3 = new char[] {'0','9','1','9','2','2','9','9'};
 
 int[] numcount = new int[10];
 
@@ -269,6 +277,12 @@ for(int i=0;i<numcount.length;i++){
 }
 
 System.out.println(isMoreThan3);
+
+for(int i=0;i<numcount.length;i++){
+  if(numcount[i] > 1){
+    System.out.print(i + " ");
+  }
+}
 
 
 

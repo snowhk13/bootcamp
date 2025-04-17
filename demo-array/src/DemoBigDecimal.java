@@ -1,4 +1,5 @@
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class DemoBigDecimal {
   public static void main(String[] args) {
@@ -32,5 +33,30 @@ public class DemoBigDecimal {
 
       // 10 / 3
       // rounding? 3.45 -> 3.4(HALF_DOWN)? 3.45 -> 3.5 (HALF_UP)?
+      
+      BigDecimal bd7 = BigDecimal.valueOf(10.0).divide(BigDecimal.valueOf(3.0),2,RoundingMode.HALF_UP);
+      System.out.println(bd7);
+
+      BigDecimal bd9 = BigDecimal.valueOf(8.5).divide(BigDecimal.valueOf(2.0),1,RoundingMode.HALF_UP);
+      System.out.println(bd9);
+
+      BigDecimal bd10 = BigDecimal.valueOf(8.5).divide(BigDecimal.valueOf(2.0),2,RoundingMode.HALF_DOWN);
+      System.out.println(bd10);
+
+      BigDecimal bd11 = new BigDecimal("5").divide(BigDecimal.valueOf(2));
+      System.out.println(bd11);
+
+      System.out.println(BigDecimal.valueOf(-2).abs());
+      System.out.println(BigDecimal.valueOf(2).pow(3));
+
+      BigDecimal source = BigDecimal.valueOf(2);
+      double result = source.doubleValue();
+      int result2 = source.intValue();
+      String result3 = source.toString();
+
+      BigDecimal bg20 = BigDecimal.valueOf(10.0).divide(BigDecimal.valueOf(2));
+
+      System.out.println(bg20);
+      
   }
 }
