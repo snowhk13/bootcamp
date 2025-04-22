@@ -15,7 +15,8 @@ public class Circle {
 
   public double getArea(){
   double x = BigDecimal.valueOf(this.radius).multiply(BigDecimal.valueOf(this.radius))//
-  .multiply(BigDecimal.valueOf(Math.PI)).doubleValue();
+  .multiply(BigDecimal.valueOf(Math.PI))//
+  .doubleValue();
 
   return x;
 
@@ -23,7 +24,7 @@ public class Circle {
 
   public static void main(String[] args) {
     Circle c1 = new Circle();
-    c1.setRadius(5);
+    c1.setRadius(3.0);
     System.out.println(c1.getArea());
   }
   
