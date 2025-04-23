@@ -2,77 +2,72 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 
 public class Person {
-
-  private String name;
+  // height weight
   private double height;
   private double weight;
 
+  public Person(){
 
-  public void setName(String name){
-    this.name = name;
   }
-  public void setHeight(double height){
+
+  public Person(double height,double weight){
     this.height = height;
-  }
-  public void setWeight(double weight){
     this.weight = weight;
   }
 
-
-  public String getName(){
-    return this.name;
-  }
-  public double getHeight(){
+  // getter
+  public double getHeight() {
     return this.height;
   }
-  
-  public double getWeight(){
+
+  public double getWeight() {
     return this.weight;
   }
-  
 
-  
-  public double getBmi(){
-    double x;
-    BigDecimal tempH = BigDecimal.valueOf(this.height).divide(BigDecimal.valueOf(100));
-    x = BigDecimal.valueOf(this.weight).divide(tempH.pow(2),2,RoundingMode.HALF_UP).doubleValue();
-    
-    return x;
+  // setter
+  public void setHeight(double height) {
+    this.height = height;
   }
 
-  public String getWeightStatus(){
-    double x = this.getBmi();
+  public void setWeight(double weight) {
+    this.weight = weight;
+  }
 
-    if(x < 18.5){
-      return "Underweight";
-    }else if(x >= 18.5 && x < 25.0){
+  // getBMI (weight / height^2)
+  public double getBMI() { // presentation
+    return BigDecimal.valueOf(this.weight)
+        .divide(BigDecimal.valueOf(Math.pow(this.height, 2.0)), 2,
+            RoundingMode.HALF_UP)
+        .doubleValue();
+  }
+
+  // getWeightStatus (presentation)
+  public String getWeightStatus() {
+    double bmi = this.getBMI();
+    if (bmi < 18.5) {
+      return "Underweight"; // "return" -> exit method
+    } else if (bmi >= 18.5 && bmi < 25.0) {
       return "Normal";
-    }else if(x >= 25.0 && x < 30.0){
+    } else if (bmi >= 25.0 && bmi < 30.0) {
       return "Overweight";
-    }else{
-      return "Obese";
     }
+    return "Obese";
   }
 
   public static void main(String[] args) {
     Person p1 = new Person();
-    p1.setName("Peter");
-    p1.setHeight(175);
-    p1.setWeight(65);
+    System.out.println(p1.getHeight()); // 0.0
+    System.out.println(p1.getWeight()); // 0.0
 
-    Person p2 = new Person();
-    p2.setName("Tom");
-    p2.setHeight(176);
-    p2.setWeight(79);
+    p1.setHeight(1.76);
+    p1.setWeight(79);
+    System.out.println(p1.getBMI()); // 24.54
+    System.out.println(p1.getWeightStatus()); // Overweight
 
-    System.out.println(p1.getName() + " BMI is " + p1.getBmi());
+    Person p3 = new Person(1.80,80);
 
-    System.out.println(p2.getName() + " BMI is " + p2.getBmi());
-
-    System.out.println(p1.getName() + " Weight Status is " + p1.getWeightStatus());
-    
-    System.out.println(p2.getName() + " Weight Status is " + p2.getWeightStatus());
+    System.out.println(p3.getHeight());
+    System.out.println(p3.getWeight());
 
   }
-  
 }
