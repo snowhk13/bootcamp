@@ -52,7 +52,9 @@ public class DemoDate {
     System.out.println(dow2); // WEDNESDAY
 
     System.out.println(LocalDate.now());
-    System.out.println(today.compareTo(LocalDate.of(2025,4,18)));
+    today = LocalDate.now();
+    System.out.println(today.compareTo(LocalDate.of(2025,4,24)));
+    System.out.println(today.equals(LocalDate.of(2025,4,24)));
   }
   
 }

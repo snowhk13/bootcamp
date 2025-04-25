@@ -40,6 +40,25 @@ public class Person {
             RoundingMode.HALF_UP)
         .doubleValue();
   }
+  public static double getBMI(double weight,double height){
+    
+    return BigDecimal.valueOf(weight).divide(BigDecimal.valueOf(Math.pow(height, 2)),2,RoundingMode.HALF_UP).doubleValue();
+ 
+  }
+
+  public static String getWeightStatus(double weight,double height){
+   double bmi = BigDecimal.valueOf(weight).divide(BigDecimal.valueOf(Math.pow(height, 2)),2,RoundingMode.HALF_UP).doubleValue();
+
+   if (bmi < 18.5) {
+    return "Underweight"; // "return" -> exit method
+  } else if (bmi >= 18.5 && bmi < 25.0) {
+    return "Normal";
+  } else if (bmi >= 25.0 && bmi < 30.0) {
+    return "Overweight";
+  }
+  return "Obese";
+
+  }
 
   // getWeightStatus (presentation)
   public String getWeightStatus() {
@@ -68,6 +87,10 @@ public class Person {
 
     System.out.println(p3.getHeight());
     System.out.println(p3.getWeight());
+
+    System.out.println(getBMI(76, 1.76));
+
+    System.out.println(getWeightStatus(76, 1.76));
 
   }
 }
