@@ -8,7 +8,7 @@ public class DemoArrayList {
     // Store a set of integer
     int[] arr = new int[] {4, -10, 100, 55};
     // ! int[] cannot store non-int values
-     
+
     // Auto-box
     // long -> Long (Number)
     // byte -> Byte (Number)
@@ -32,8 +32,6 @@ public class DemoArrayList {
     integers.add(10); // auto-box from int to Integer
     integers.add(100);
     integers.add(-3);
-
-    
     System.out.println(integers.size()); // 3
 
     // add() vs size()

@@ -36,14 +36,13 @@ public class Team {
     System.out.println(team.size()); // 1
 
     // Difference between ArrayList and LinkedList
-    // - Underlying Data Structure: ArrayList (array); LinkedList (object links
-    // object)
-    // Array -> 
-    // 1. Fixed Length, recreate array -> copy elements
-    // 2. Locate the element by array position
+    // - Underlying Data Structure: ArrayList (array); LinkedList (object links object)
+    // Array
+      // 1. Fixed Length, recreate array -> copy elements
+      // 2. Locate the element by array position
     // LinkedList
-    // 1. stores first and last
-    // 2. Each node contains the "previous" and the next
+      // 1. stores first and last
+      // 2. Each node contains the "previous" and the next
 
   }
 }
