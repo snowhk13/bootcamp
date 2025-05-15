@@ -60,6 +60,19 @@ public class Card {
 
   }
 
+  @Override
+  public boolean equals(Object obj){
+    if(this == obj){
+      return true;
+    }
+    if(!(obj instanceof Card)){
+      return false;
+    }
+    Card card = (Card) obj;
+    
+    return this.getRank() == card.getRank() && this.getSuit() == card.getSuit();
+  }
+
   public boolean equals(Card card){
     return this.rank == card.getRank() && this.suit == card.getSuit();
   }

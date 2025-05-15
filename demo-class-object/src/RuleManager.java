@@ -13,7 +13,7 @@ public static boolean isThreeOfKind(Card c1, Card c2, Card c3){
 
 // 8,7,8,8,7
 public static boolean isFullHouse(Card[] cards){
-  if(cards.length != 5){
+  if(cards == null || cards.length != 5){
     return false;
   }
 
@@ -36,6 +36,7 @@ public static boolean isFullHouse(Card[] cards){
 
   return result1 && result2;
 }
+
 //6,7,8,9,10
 //A,K,Q,J,10
 public static boolean isStraight(Card[] cards){
@@ -61,7 +62,8 @@ public static boolean isStraight(Card[] cards){
       }
     }
 
- System.out.println(Arrays.toString(arrTemp));
+//  System.out.println(Arrays.toString(arrTemp));
+ 
 
  if(arrTemp[arrTemp.length-1] - arrTemp[0] == 12){
   arrTemp[arrTemp.length-1] = '1';
@@ -77,7 +79,7 @@ public static boolean isStraight(Card[] cards){
     }
  }
 
- System.out.println(Arrays.toString(arrTemp));
+//  System.out.println(Arrays.toString(arrTemp));
 
     for(int i=0;i<arrTemp.length-1;i++){
       if(arrTemp[i+1] - arrTemp[i] != 1){

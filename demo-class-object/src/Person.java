@@ -73,6 +73,14 @@ public class Person {
     return "Obese";
   }
 
+  public boolean equals(Person person){
+    return this.height == person.getHeight()
+    && this.weight == person.getWeight();
+  }
+  public String toString(){
+    return "Person(Height is " + this.getHeight() +" , Weight is "+ this.getWeight() + ")";
+  }
+
   public static void main(String[] args) {
     Person p1 = new Person();
     System.out.println(p1.getHeight()); // 0.0
@@ -91,6 +99,15 @@ public class Person {
     System.out.println(getBMI(76, 1.76));
 
     System.out.println(getWeightStatus(76, 1.76));
+
+    System.out.println(p3.toString()); //Person(Height is 1.8 , Weight is 80.0)
+     //自動CALL toString()
+    System.out.println(p3); // Person(Height is 1.8 , Weight is 80.0)
+
+    Person p4 = new Person(1.80,80);
+
+    System.out.println(p3.equals(p4));
+    System.out.println(p3.equals(p1));
 
   }
 }
