@@ -1,8 +1,10 @@
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Objects;
 
 public class DataStructureExercise {
   public static void main(String[] args) {
@@ -43,8 +45,7 @@ public class DataStructureExercise {
     }
  for(int i=0;i<arr2.size();i++){
   if(arr2.get(i).equals("Mango")){
-    arr2.remove(i);
-    arr2.add("Peach");
+    arr2.set(i,"Peach");
   }
  }
 
@@ -188,5 +189,56 @@ System.out.println(studentSet3);
       return "Student not found";
     }
 
+   public static class Student {
+    private int id;
+    private String name;
 
+    // Constructor
+    // getter, setter, etc.
+    public Student(int id, String name) {
+    this.id = id;
+    this.name = name;
+  }
+  @Override
+  public String toString() {
+    return "Student" + "(ID=" + this.id + ",Name=" + this.name + ")";
+  }
+
+@Override
+ public boolean equals(Object obj){
+  if(this == obj){
+    return true;
+  }
+  if(!(obj instanceof Student)){
+    return false;
+  }
+  Student student = (Student) obj;
+  return this.id == student.getID();
+ }
+
+ @Override
+ public int hashCode(){
+  return Objects.hash(this.id);
+ }
+
+  public String getName() {
+    return this.name;
+  }
+
+  public int getID() {
+    return this.id;
+  }
+
+
+  }
+
+  public static class SortByName implements Comparator<Student>  {
+  @Override
+  public int  compare(Student s1 , Student s2){
+    return s1.getName().charAt(0) < s2.getName().charAt(0) ? -1 : 1;
+  }
 }
+}
+
+
+
