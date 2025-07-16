@@ -1,8 +1,17 @@
-public class App {
-    public static void main(String[] args) throws Exception {
-        String s1 = "O O1234";
-        System.out.println(s1.contains("24"));
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
-        System.out.println(s1.charAt(0));
+public class App {
+    public static void main(String[] args)  {
+    List<Integer> numbers = new ArrayList<>(Arrays.asList(3,4,3,1,2));
+
+    int[] numbers2 = new int[]{ 3,4,3,1,2 };
+    int[] numbers3 = Arrays.stream(numbers2).boxed().sorted().collect(Collectors.toList())
+    .mapToInt(Integer::intValue).toArray();
+    
+
+    System.out.println(numbers);
     }
 }

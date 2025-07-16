@@ -8,7 +8,7 @@ public class Ball {
   }
 
   public static enum Color {
-    RED, BLUE,;
+    RED, BLUE,YELLOW;
   }
 
   @Override

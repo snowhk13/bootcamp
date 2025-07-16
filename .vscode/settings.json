@@ -1,0 +1,20 @@
+{
+	"folders": [
+
+		{
+			"path": "../github/org/2504/bootcamp/bc2504-sb/demo-coingecko"
+		},
+		{
+			"path": "../github/org/2504/bootcamp/bc2504-sb/demo-crypto"
+		},
+    {
+			"path": "../github/org/2504/bootcamp/demo-vue-app"
+		}
+
+	],
+	"settings": {
+		"java.compile.nullAnalysis.mode": "automatic",
+		"java.configuration.updateBuildConfiguration": "interactive"
+  },
+  "java.compile.nullAnalysis.mode": "automatic"
+}
