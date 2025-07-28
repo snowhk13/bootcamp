@@ -9,6 +9,6 @@ public static void main(String[] args) {
    System.out.println(list1);
    int[] arr2 = list1.stream().mapToInt(n->n).toArray();
 
-   System.out.println(Arrays.toString(arr2));
+  
 }
 }
