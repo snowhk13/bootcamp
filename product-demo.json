@@ -16,5 +16,5 @@
     {"id" : 15,"name" : "Gundam3","price" : 4,"image" : "c3.jpg","description":"GUNDAM模型"},
     {"id" : 16,"name" : "Gundam4","price" : 20,"image" : "c4.jpg","description":"GUNDAM模型"},
     {"id" : 17,"name" : "Gundam5","price" : 10,"image" : "c5.jpg","description":"GUNDAM模型"},
-    {"id" : 18,"name" : "Gundam6","price" : 5,"image" : "c6.jpg","description":"GUNDAM模型"},
+    {"id" : 18,"name" : "Gundam6","price" : 5,"image" : "c6.jpg","description":"GUNDAM模型"}
 ]
