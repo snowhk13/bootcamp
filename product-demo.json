@@ -16,5 +16,11 @@
     {"id" : 15,"name" : "Gundam3","price" : 4,"image" : "g3.jpg","type" : "gundam", "description":"GUNDAM模型"},
     {"id" : 16,"name" : "Gundam4","price" : 20,"image" : "g4.jpg","type" : "gundam", "description":"GUNDAM模型"},
     {"id" : 17,"name" : "Gundam5","price" : 10,"image" : "g5.jpg","type" : "gundam", "description":"GUNDAM模型"},
-    {"id" : 18,"name" : "Gundam6","price" : 5,"image" : "g6.jpg","type" : "gundam", "description":"GUNDAM模型"}
+    {"id" : 18,"name" : "Gundam6","price" : 5,"image" : "g6.jpg","type" : "gundam", "description":"GUNDAM模型"},
+    {"id" : 19,"name" : "吉伊卡哇6","price" : 5,"image" : "c7.jpg","type" : "chiikawa", "description":"吉伊卡哇"},
+    {"id" : 20,"name" : "吉伊卡哇7","price" : 3,"image" : "c8.jpg","type" : "chiikawa", "description":"吉伊卡哇"},
+    {"id" : 21,"name" : "Figma7","price" : 4,"image" : "f7.jpg","type" : "figma", "description":"Figma公仔"},
+    {"id" : 22,"name" : "Figma8","price" : 20,"image" : "f8.jpg","type" : "figma", "description":"Figma公仔"},
+    {"id" : 23,"name" : "Gundam7","price" : 10,"image" : "g5.jpg","type" : "gundam", "description":"GUNDAM模型"},
+    {"id" : 24,"name" : "Gundam8","price" : 5,"image" : "g6.jpg","type" : "gundam", "description":"GUNDAM模型"}
 ]
